@@ -1,0 +1,150 @@
+.app {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .active {
+    background: #646cff;
+    color: white;
+  }
+  
+  .examples-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .example-column {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  /* New visual differentiation styles */
+  .example-card {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .bad-example {
+    border-color: #ff4444;
+    background: #fff0f0;
+  }
+  
+  .bad-example .header {
+    border-bottom: 2px solid #ff4444;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .good-example {
+    border-color: #00c851;
+    background: #f0fff4;
+  }
+  
+  .good-example .header {
+    border-bottom: 2px solid #00c851;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .warning {
+    color: #ff4444;
+    font-weight: bold;
+  }
+  
+  .render-counter {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 1rem;
+    opacity: 0.8;
+  }
+  
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .list-item {
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .list-item.stable {
+    background: #e8f5e9;
+  }
+  
+  .list-item.unstable {
+    background: #ffebee;
+  }
+  
+  .demo-button {
+    background: #6200ee;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .demo-button:hover {
+    opacity: 0.9;
+  }
+  
+  .error-fallback {
+    color: #ff4444;
+    font-weight: bold;
+    padding: 1rem;
+    border: 2px dashed #ff4444;
+  }
+  
+  .bad-practice h2::before {
+    content: "⚠️ ";
+  }
+  
+  .good-practice h2::before {
+    content: "✅ ";
+  }
+  
+  .bad-example {
+    border: 2px solid #ff4444;
+    background: #ffeaea;
+  }
+  
+  .good-example {
+    border: 2px solid #4CAF50;
+    background: #f0f9eb;
+  }
+  
+  .notes {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 4px;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  label {
+    display: block;
+    margin: 8px 0;
+  }
+  
