@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+
 import { BadCounter } from '../BadCounter';
 import { GoodCounter } from '../GoodCounter';
 

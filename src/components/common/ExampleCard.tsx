@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 interface ExampleCardProps {
   title: string;
@@ -7,7 +7,7 @@ interface ExampleCardProps {
   children: ReactNode;
 }
 
-export const ExampleCard = ({ title, variant, description, children }: ExampleCardProps) => (
+export const ExampleCard: FC<ExampleCardProps> = ({ title, variant, description, children }: ExampleCardProps) => (
   <div className={`${variant}-example example-card`}>
     <div className="header">
       <h3>{variant === 'bad' ? '⚠️' : '✅'} {title}</h3>

@@ -14,7 +14,7 @@ export const ListItem = ({ item, defaultValue }: ListItemProps) => {
   }, [item]);
 
   return (
-    <div style={{ transition: "background 0.5s", backgroundColor: "lightblue", padding: "5px", margin: "5px" }}>
+    <div style={{ backgroundColor: "lightblue", padding: "5px", margin: "5px" }}>
       <span>{item}</span>
       <input
         type="text"

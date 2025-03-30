@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import './styles/App.css'
-import { BadCounter } from './examples/counter/BadCounter.jsx'
-import { GoodCounter } from './examples/counter/GoodCounter.jsx'
-import { BadList } from './examples/list/BadList.jsx'
-import { GoodList } from './examples/list/GoodList.jsx'
-import { BadTodo } from './examples/todo/BadTodo.jsx'
-import { GoodTodo } from './examples/todo/GoodTodo.jsx'
-import { BadTimer } from './examples/timer/BadTimer.jsx'
-import { GoodTimer } from './examples/timer/GoodTimer.jsx'
+import React, { useState } from 'react';
+
+import './styles/App.css';
+import { BadCounter } from './examples/counter/BadCounter.tsx';
+import { GoodCounter } from './examples/counter/GoodCounter.tsx';
+import { BadList } from './examples/list/BadList.tsx';
+import { GoodList } from './examples/list/GoodList.tsx';
+import { BadTodo } from './examples/todo/BadTodo.tsx';
+import { GoodTodo } from './examples/todo/GoodTodo.tsx';
+import { BadTimer } from './examples/timer/BadTimer.tsx';
+import { GoodTimer } from './examples/timer/GoodTimer.tsx';
 
 
 export default function App() {
-  const [example, setExample] = useState(0)
+  const [example, setExample] = useState<number>(0);
 
   const examples = [
     [BadCounter, GoodCounter],
     [BadList, GoodList],
     [BadTodo, GoodTodo],
     [BadTimer, GoodTimer],
-  ]
+  ];
 
-  const [BadComponent, GoodComponent] = examples[example]
+  const [BadComponent, GoodComponent] = examples[example];
 
   return (
     <div className="app">
@@ -52,5 +53,5 @@ export default function App() {
         <p>Open browser console to see render logs</p>
       </div>
     </div>
-  )
+  );
 }

@@ -1,20 +1,26 @@
-import { useState } from 'react'
-import { INITIAL_TODOS } from './constants'
+import React, { FC, useState } from 'react';
 
-export const BadTodo = () => {
+import { INITIAL_TODOS } from './constants';
+import { ExampleCard } from '../../components/common/ExampleCard';
+
+
+export const BadTodo: FC = () => {
   // deep clone the initial todos
   const initialTodos = structuredClone(INITIAL_TODOS);
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<{ text: string; completed: boolean }[]>(initialTodos);
 
-  const toggleTodo = index => {
+  const toggleTodo = (index: number) => {
     todos[index].completed = !todos[index].completed;
     setTodos(todos);
     console.log('BadTodo rendered', todos);
-  }
+  };
 
   return (
-    <div className="bad-example">
-      <h3>Bad State Mutation</h3>
+    <ExampleCard 
+      title="Bad State Mutation" 
+      variant="bad" 
+      description="Notice: Direct mutation of state is bad practice!">
+
       {todos.map((todo, index) => (
         <div key={index}>
           <label>
@@ -26,11 +32,8 @@ export const BadTodo = () => {
             {todo.text}
           </label>
           <div>{todo.completed ? ' (completed)' : ' (not completed)'}</div>
-        </div>
+        </div>   
       ))}
-      <div style={{ color: 'red', marginTop: '10px' }}>
-        <p>Notice: Direct mutation of state is bad practice!</p>
-      </div>
-    </div>
-  )
-}
+    </ExampleCard>
+  );
+};

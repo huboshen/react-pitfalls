@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react';
+import { ExampleCard } from '../../components/common/ExampleCard';
 
-export const GoodTimer = () => {
-  const [count, setCount] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+export const GoodTimer: FC = () => {
+  const [count, setCount] = useState<number>(0);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
 
   useEffect(() => {
     if (!isRunning) return;
@@ -19,15 +20,11 @@ export const GoodTimer = () => {
   }, [isRunning]);
 
   return (
-    <div className="good-example">
-      <h3>Good Timer (With Cleanup)</h3>
+    <ExampleCard title="Good Timer (With Cleanup)" variant='good' description='Good practice: Timer properly cleaned up!'>
       <p>Count: {count}</p>
       <button onClick={() => setIsRunning(!isRunning)}>
         {isRunning ? 'Stop' : 'Start'}
       </button>
-      <div style={{ color: 'green', marginTop: '10px' }}>
-        <p>Good practice: Timer properly cleaned up!</p>
-      </div>
-    </div>
+    </ExampleCard>
   );
 };
