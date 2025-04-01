@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import './styles/App.css';
-import { BadCounter } from './examples/counter/BadCounter.tsx';
-import { GoodCounter } from './examples/counter/GoodCounter.tsx';
-import { BadList } from './examples/list/BadList.tsx';
-import { GoodList } from './examples/list/GoodList.tsx';
-import { BadTodo } from './examples/todo/BadTodo.tsx';
-import { GoodTodo } from './examples/todo/GoodTodo.tsx';
-import { BadTimer } from './examples/timer/BadTimer.tsx';
-import { GoodTimer } from './examples/timer/GoodTimer.tsx';
+import { BadCounter } from './examples/example1/BadCounter.tsx';
+import { GoodCounter } from './examples/example1/GoodCounter.tsx';
+import { BadList } from './examples/example2/BadList.tsx';
+import { GoodList } from './examples/example2/GoodList.tsx';
+import { BadTodo } from './examples/example3/BadTodo.tsx';
+import { GoodTodo } from './examples/example3/GoodTodo.tsx';
+import { BadTimer } from './examples/example4/BadTimer.tsx';
+import { GoodTimer } from './examples/example4/GoodTimer.tsx';
 
 
 export default function App() {

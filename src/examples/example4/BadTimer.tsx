@@ -1,5 +1,7 @@
-import { ExampleCard } from '../../components/common/ExampleCard';
 import React, { FC , useState, useEffect } from 'react';
+
+import { ExampleCard } from '../../components/common/ExampleCard';
+
 
 export const BadTimer: FC = () => {
   const [count, setCount] = useState<number>(0);
